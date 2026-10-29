@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Студентський портал з вищої математики: тригонометрія, тести, успішність, реєстрація">
+  <meta name="author" content="Студент групи ІТ">
+  <title>Математичний портал студента</title>
+</head>
+<body bgcolor="#ffffff">
+
+<!-- Двоколонковий макет сторінки, побудований за допомогою табличної верстки (без CSS) -->
+<table width="100%" border="1" cellspacing="12" cellpadding="10" bgcolor="#ffffff">
+
+  <!-- ===================== HEADER ===================== -->
+  <tr>
+    <td colspan="2" bgcolor="#dde4f0" align="center">
+      <header>
+        <h1>Математичний портал студента</h1>
+        <p><i>Тригонометрія, тести та успішність &mdash; усе в одному місці</i></p>
+
+        <!-- Навігаційне меню -->
+        <table width="95%" border="1" cellpadding="8" cellspacing="0" bgcolor="#9fb3d6">
+          <tr>
+            <td align="center">
+              <nav>
+                <a href="#theory">Теорія</a> &nbsp;|&nbsp;
+                <a href="#test">Тест</a> &nbsp;|&nbsp;
+                <a href="#grades">Успішність</a> &nbsp;|&nbsp;
+                <a href="#register">Реєстрація</a> &nbsp;|&nbsp;
+                <a href="#contacts">Контакти</a>
+              </nav>
+            </td>
+          </tr>
+        </table>
+      </header>
+    </td>
+  </tr>
+
+  <tr>
+    <!-- ===================== CONTENT MAIN SECTION ===================== -->
+    <td width="70%" valign="top" bgcolor="#c9d7ee">
+      <main>
+        <h2 align="center">Основний розділ</h2>
+
+        <!-- ---------- article 1: оформлений текст ---------- -->
+        <table width="100%" border="1" cellpadding="12" cellspacing="0" bgcolor="#a3cbdc">
+          <tr>
+            <td>
+              <article id="theory">
+                <h3>1. Трохи теорії: тригонометрія</h3>
+
+                <p>
+                  Основна <b>тригонометрична тотожність</b>:
+                  <i>cos</i><sup>2</sup><b>&alpha;</b> + <i>sin</i><sup>2</sup><b>&alpha;</b> = 1
+                  <br>
+                  Приклад суворої нерівності: &alpha;&lt;&beta;.
+                  <br>
+                  Нестрога нерівність &alpha;&le;&beta; означає, що
+                  або &alpha;&lt;&beta;, або &alpha;=&beta;.
+                </p>
+
+                <hr>
+
+                <h4>Додаткові приклади</h4>
+                <p>
+                  Тотожність виводиться з <a href="https://uk.wikipedia.org/wiki/Теорема_Піфагора" target="_blank">теореми Піфагора</a>
+                  для прямокутного трикутника з гіпотенузою <i>c</i> = 1:
+                  <i>a</i><sup>2</sup> + <i>b</i><sup>2</sup> = <i>c</i><sup>2</sup>.
+                </p>
+                <p>
+                  Індекси позначають підрядковим шрифтом: <i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>
+                  &rarr; корені рівняння; log<sub>2</sub>8 = 3.
+                  Кут повного оберту дорівнює 2&pi; рад = 360&deg;, а
+                  tg&nbsp;&alpha; = sin&nbsp;&alpha; &divide; cos&nbsp;&alpha;, якщо cos&nbsp;&alpha; &ne; 0.
+                </p>
+                <p>
+                  <small>Детальніше &mdash; у статті
+                  &laquo;<a href="https://uk.wikipedia.org/wiki/Тригонометричні_тотожності" target="_blank">Тригонометричні тотожності</a>&raquo;.</small>
+                </p>
+              </article>
+            </td>
+          </tr>
+        </table>
+
+        <br>
+
+        <!-- ---------- article 2: дворівневий список ---------- -->
+        <table width="100%" border="1" cellpadding="12" cellspacing="0" bgcolor="#a3cbdc">
+          <tr>
+            <td>
+              <article id="test">
+                <h3>2. Перевір себе: міні-тест</h3>
+                <p>Оберіть правильну відповідь на кожне питання <em>(правильні варіанти виділено <mark>маркером</mark>)</em>.</p>
+
+                <ol>
+                  <li>
+                    <b>Чому дорівнює <i>sin</i><sup>2</sup>&alpha; + <i>cos</i><sup>2</sup>&alpha;?</b>
+                    <ol type="a">
+                      <li>0</li>
+                      <li><mark>1</mark></li>
+                      <li>2</li>
+                      <li>&alpha;</li>
+                    </ol>
+                  </li>
+                  <li>
+                    <b>Скільки радіан у куті 180&deg;?</b>
+                    <ol type="a">
+                      <li>&pi;/2</li>
+                      <li><mark>&pi;</mark></li>
+                      <li>2&pi;</li>
+                    </ol>
+                  </li>
+                  <li>
+                    <b>Який знак позначає нестрогу нерівність?</b>
+                    <ol type="a">
+                      <li>&lt;</li>
+                      <li>&gt;</li>
+                      <li><mark>&le;</mark></li>
+                      <li>&ne;</li>
+                    </ol>
+                  </li>
+                  <li>
+                    <b>Чому дорівнює <i>cos</i>&nbsp;0&deg;?</b>
+                    <ol type="a">
+                      <li>&minus;1</li>
+                      <li>0</li>
+                      <li><mark>1</mark></li>
+                    </ol>
+                  </li>
+                </ol>
+              </article>
+            </td>
+          </tr>
+        </table>
+
+        <br>
+
+        <!-- ---------- article 3: таблиця успішності ---------- -->
+        <table width="100%" border="1" cellpadding="12" cellspacing="0" bgcolor="#a3cbdc">
+          <tr>
+            <td>
+              <article id="grades">
+                <h3>3. Успішність студентів 3-го курсу</h3>
+                <p>Результати семестрового контролю (за 100-бальною шкалою):</p>
+
+                <table border="1" cellpadding="6" cellspacing="0" width="100%" bgcolor="#ffffff">
+                  <caption><b>Таблиця 1.</b> Підсумкові бали за осінній семестр</caption>
+                  <thead>
+                    <tr bgcolor="#dde4f0">
+                      <th rowspan="2">№</th>
+                      <th rowspan="2">ПІБ студента</th>
+                      <th colspan="4">Дисципліна</th>
+                      <th rowspan="2">Середній бал</th>
+                    </tr>
+                    <tr bgcolor="#dde4f0">
+                      <th>Інтернет-технології</th>
+                      <th>Бази даних</th>
+                      <th>Теорія ймовірностей</th>
+                      <th>Операційні системи</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr align="center">
+                      <td>1</td>
+                      <td align="left">Коваленко Олена</td>
+                      <td>95</td>
+                      <td>88</td>
+                      <td>91</td>
+                      <td>84</td>
+                      <td><b>89,5</b></td>
+                    </tr>
+                    <tr align="center">
+                      <td>2</td>
+                      <td align="left">Шевчук Андрій</td>
+                      <td>78</td>
+                      <td>82</td>
+                      <td>70</td>
+                      <td>90</td>
+                      <td><b>80,0</b></td>
+                    </tr>
+                    <tr align="center">
+                      <td>3</td>
+                      <td align="left">Бондар Марія</td>
+                      <td>100</td>
+                      <td>93</td>
+                      <td>87</td>
+                      <td>96</td>
+                      <td><b>94,0</b></td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr align="center" bgcolor="#dde4f0">
+                      <td colspan="2" align="right"><b>Середнє по групі:</b></td>
+                      <td>91,0</td>
+                      <td>87,7</td>
+                      <td>82,7</td>
+                      <td>90,0</td>
+                      <td><b>87,8</b></td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </article>
+            </td>
+          </tr>
+        </table>
+
+        <br>
+
+        <!-- ---------- article 4: форма реєстрації ---------- -->
+        <table width="100%" border="1" cellpadding="12" cellspacing="0" bgcolor="#a3cbdc">
+          <tr>
+            <td>
+              <article id="register">
+                <h3>4. Реєстрація відвідувача сайту</h3>
+                <p>Зареєструйтеся, щоб зберігати результати тестів. Поля, позначені <b>*</b>, обов'язкові.</p>
+
+                <form action="#" method="post">
+                  <fieldset>
+                    <legend><b>Особисті дані</b></legend>
+                    <table border="0" cellpadding="4">
+                      <tr>
+                        <td><label for="fullname">ПІБ *</label></td>
+                        <td><input type="text" id="fullname" name="fullname" size="30" placeholder="Іваненко Іван Іванович" required></td>
+                      </tr>
+                      <tr>
+                        <td><label for="birth">Дата народження</label></td>
+                        <td><input type="date" id="birth" name="birth"></td>
+                      </tr>
+                      <tr>
+                        <td>Стать</td>
+                        <td>
+                          <input type="radio" id="male" name="gender" value="male">
+                          <label for="male">чоловіча</label>
+                          <input type="radio" id="female" name="gender" value="female">
+                          <label for="female">жіноча</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><label for="course">Курс</label></td>
+                        <td>
+                          <select id="course" name="course">
+                            <option value="1">1 курс</option>
+                            <option value="2">2 курс</option>
+                            <option value="3" selected>3 курс</option>
+                            <option value="4">4 курс</option>
+                            <option value="master">Магістратура</option>
+                          </select>
+                        </td>
+                      </tr>
+                    </table>
+                  </fieldset>
+
+                  <br>
+
+                  <fieldset>
+                    <legend><b>Дані облікового запису</b></legend>
+                    <table border="0" cellpadding="4">
+                      <tr>
+                        <td><label for="email">E-mail *</label></td>
+                        <td><input type="email" id="email" name="email" size="30" placeholder="student@nure.ua" required></td>
+                      </tr>
+                      <tr>
+                        <td><label for="login">Логін *</label></td>
+                        <td><input type="text" id="login" name="login" size="20" minlength="4" maxlength="20" required></td>
+                      </tr>
+                      <tr>
+                        <td><label for="password">Пароль *</label></td>
+                        <td><input type="password" id="password" name="password" size="20" minlength="8" required></td>
+                      </tr>
+                    </table>
+                  </fieldset>
+
+                  <br>
+
+                  <fieldset>
+                    <legend><b>Інтереси</b></legend>
+                    <input type="checkbox" id="i-math" name="interests" value="math" checked>
+                    <label for="i-math">Вища математика</label><br>
+                    <input type="checkbox" id="i-web" name="interests" value="web">
+                    <label for="i-web">Веб-розробка</label><br>
+                    <input type="checkbox" id="i-db" name="interests" value="db">
+                    <label for="i-db">Бази даних</label>
+                    <p>
+                      <label for="about">Коротко про себе:</label><br>
+                      <textarea id="about" name="about" rows="4" cols="50" placeholder="Що вас цікавить на порталі?"></textarea>
+                    </p>
+                  </fieldset>
+
+                  <p>
+                    <input type="checkbox" id="agree" name="agree" required>
+                    <label for="agree">Погоджуюся з правилами користування сайтом *</label>
+                  </p>
+                  <p>
+                    <input type="submit" value="Зареєструватися">
+                    <input type="reset" value="Очистити форму">
+                  </p>
+                </form>
+              </article>
+            </td>
+          </tr>
+        </table>
+      </main>
+    </td>
+
+    <!-- ===================== SIDEBAR ===================== -->
+    <td width="30%" valign="top" bgcolor="#bccae0">
+      <aside>
+        <!-- Search -->
+        <h3 align="center">Пошук</h3>
+        <form action="https://www.google.com/search" method="get" target="_blank">
+          <input type="search" name="q" size="18" placeholder="Пошук по темі...">
+          <input type="submit" value="Знайти">
+        </form>
+
+        <br>
+
+        <!-- Navigation -->
+        <table width="100%" border="1" cellpadding="10" cellspacing="0" bgcolor="#96b2df">
+          <tr>
+            <td valign="top">
+              <nav>
+                <h3 align="center">Навігація</h3>
+                <ul>
+                  <li><a href="#theory">Тригонометрична тотожність</a></li>
+                  <li><a href="#test">Міні-тест</a></li>
+                  <li><a href="#grades">Таблиця успішності</a></li>
+                  <li><a href="#register">Форма реєстрації</a></li>
+                </ul>
+                <h4>Корисні ресурси</h4>
+                <ul>
+                  <li><a href="https://uk.wikipedia.org/wiki/Тригонометричні_функції" target="_blank">Тригонометричні функції</a></li>
+                  <li><a href="https://developer.mozilla.org/uk/docs/Web/HTML" target="_blank">Довідник HTML (MDN)</a></li>
+                  <li><a href="https://html.spec.whatwg.org/" target="_blank">Специфікація HTML</a></li>
+                </ul>
+
+                <hr>
+
+                <!-- Зображення-банер, що веде на офіційний сайт університету -->
+                <h4 align="center">Наш університет</h4>
+                <p align="center">
+                  <a href="https://nure.ua/" target="_blank" title="Офіційний сайт ХНУРЕ">
+                    <img src="images/nure-banner.svg" width="260" height="110"
+                         alt="Банер ХНУРЕ &mdash; перейти на офіційний сайт університету">
+                  </a>
+                </p>
+              </nav>
+            </td>
+          </tr>
+        </table>
+      </aside>
+    </td>
+  </tr>
+
+  <!-- ===================== FOOTER ===================== -->
+  <tr>
+    <td colspan="2" bgcolor="#dde4f0" align="center">
+      <footer id="contacts">
+        <p>
+          &copy; 2026 Математичний портал студента &bull;
+          Лабораторна робота №1 з дисципліни <abbr title="Інтернет-технології">ІТ</abbr><br>
+          Зв'язок: <a href="mailto:student@nure.ua">student@nure.ua</a> &bull;
+          <a href="#">&uarr; Нагору</a>
+        </p>
+      </footer>
+    </td>
+  </tr>
+
+</table>
+
+</body>
+</html>
