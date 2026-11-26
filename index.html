@@ -3,208 +3,248 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Студент групи КІУКІ-24-2 Максимович Роман">
-  <title>Лабораторна робота №1</title>
+  <title>Туристичний клуб «Вершина»</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .option {
+      position: relative;
+    }
+
+    .option input {
+      position: absolute;
+      opacity: 0;
+    }
+
+    .option label {
+      display: inline-block;
+      padding: 8px 16px 8px 38px;
+      position: relative;
+      border: 2px solid #b8c4d6;
+      border-radius: 20px;
+      background-color: #eef2f8;
+      color: #34445c;
+      cursor: pointer;
+      transition: background-color 0.2s, border-color 0.2s;
+    }
+
+    .option label::before {
+      content: "";
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      width: 16px;
+      height: 16px;
+      margin-top: -8px;
+      border: 2px solid #8a9ab3;
+      border-radius: 4px;
+      background-color: #ffffff;
+    }
+
+    .option input:hover + label {
+      background-color: #dde6f3;
+    }
+
+    .option input:focus-visible + label {
+      outline: 3px solid #f5cd47;
+      outline-offset: 2px;
+    }
+
+    .option input:checked + label {
+      background-color: #66c84e;
+      border-color: #4ea338;
+      color: #ffffff;
+    }
+
+    .option input:checked + label::before {
+      content: "✓";
+      border-color: #ffffff;
+      color: #4ea338;
+      font-size: 13px;
+      font-weight: bold;
+      line-height: 16px;
+      text-align: center;
+    }
+
+    .option input:disabled + label {
+      background-color: #e4e4e4;
+      border-color: #cfcfcf;
+      color: #9a9a9a;
+      cursor: not-allowed;
+      text-decoration: line-through;
+    }
+
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+      padding: 18px 22px;
+      background-color: #ffffff;
+    }
+
+    .flex-container > .box {
+      flex: 1 1 0;
+      min-width: 0;
+      height: 160px;
+      padding: 4px;
+      background-color: #f5cd47;
+      font-family: "Times New Roman", serif;
+      font-size: 22px;
+      color: #333333;
+    }
+
+    .flex-container > .box:first-child,
+    .flex-container > .box:last-child {
+      background-color: #66c84e;
+    }
+
+    .flex-container > .box:last-child {
+      flex-basis: 100%;
+    }
+  </style>
 </head>
 <body>
 
-<table width="100%" border="1">
+  <header id="top" class="site-header">
+    <div class="container">
+      <h1 class="logo">Вершина<span class="logo-sub">туристичний клуб</span></h1>
 
-  <tr>
-    <td width="70%" valign="top">
-        <h1 align="center">Основний розділ</h1>
+      <nav class="menu clearfix">
+        <ul>
+          <li><a href="#about">Про клуб</a></li>
+          <li><a href="#routes">Маршрути</a></li>
+          <li><a href="#trips">Походи</a></li>
+          <li><a href="#gallery">Галерея</a></li>
+          <li class="menu-right"><a href="#contacts">Контакти</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-        <!-- оформлений текст -->
-        <table width="100%" border="1">
-          <tr>
-            <td>
-                <h2>1. Основна тригонометрична тотожність:</h2>
+  <main class="container">
 
-                <p>
-                  <i>cos</i><sup>2</sup><b>&alpha;</b> + <i>sin</i><sup>2</sup><b>&alpha;</b> = 1
-                  <br>
-                  Приклад суворої нерівності: &alpha;&lt;&beta;.
-                  <br>
-                  Нестрога нерівність &alpha;&le;&beta; означає, що
-                  або &alpha;&lt;&beta;, або &alpha;=&beta;.
-                </p>
-            </td>
-          </tr>
-        </table>
+    <section id="about" class="section">
+      <h2>Про клуб</h2>
 
-        <br>
+      <img src="assets/mountains.svg" alt="Гори на світанку" class="float-left" width="220" height="150">
 
-        <!-- дворівневий список -->
-        <table width="100%" border="1">
-          <tr>
-            <td>
-                <h2>2. Міні-тест</h2>
-                <p>Оберати правильну відповідь на кожне питання.</p>
+      <p class="lead">
+        Клуб «Вершина» об'єднує студентів, які люблять <strong>гори</strong>,
+        <em>нічліг у наметі</em> та ранкову каву з видом на хмари. Ми ходимо в
+        походи вихідного дня, організовуємо <span class="highlight">літні експедиції</span>
+        Карпатами й вчимо новачків орієнтуватися з картою та компасом.
+      </p>
+      <p>
+        Кожен похід починається з інструктажу: ми перевіряємо спорядження,
+        розподіляємо обов'язки та прокладаємо маршрут. Досвідчені учасники
+        допомагають новачкам, тож долучитися може будь-хто, хто готовий пройти
+        <abbr title="кілометрів">15&nbsp;км</abbr> за день з рюкзаком.
+      </p>
 
-                <ol>
-                  <li>
-                    <b>Чому дорівнює <i>sin</i><sup>2</sup>&alpha; + <i>cos</i><sup>2</sup>&alpha;?</b>
-                    <ol type="a">
-                      <li>0</li>
-                      <li><mark>1</mark></li>
-                      <li>2</li>
-                      <li>&alpha;</li>
-                    </ol>
-                  </li>
-                  <li>
-                    <b>Який знак позначає нестрогу нерівність?</b>
-                    <ol type="a">
-                      <li>&lt;</li>
-                      <li>&gt;</li>
-                      <li><mark>&le;</mark></li>
-                      <li>&ne;</li>
-                    </ol>
-                  </li>
-                </ol>
-            </td>
-          </tr>
-        </table>
+      <p style="color: #b03a2e; font-style: italic; border-left: 4px solid #b03a2e; padding-left: 10px;">
+        Увага! Перед кожним виходом обов'язково зареєструйте групу в рятувальній службі.
+      </p>
 
-        <br>
+      <img src="assets/tent.svg" alt="Намет біля озера" class="float-right" width="180" height="130">
 
-        <!-- таблиця успішності -->
-        <table width="100%" border="1">
-          <tr>
-            <td>
-                <h2>3. Успішність студентів 3-го курсу</h2>
+      <p>
+        Взимку клуб проводить тренування зі скелелазіння у залі та лекції
+        з першої допомоги. Навесні ми відкриваємо сезон сплавом річкою, а
+        восени традиційно піднімаємося на <a href="https://uk.wikipedia.org/wiki/Говерла" target="_blank">Говерлу</a>.
+      </p>
+      <p>
+        Членський внесок символічний і йде на прокат спільного спорядження:
+        наметів, пальників, мотузок та аптечок. Власне спорядження можна
+        придбати з клубною знижкою в партнерських магазинах.
+      </p>
+      <div class="clear"></div>
+    </section>
 
-                <table border="1">
-                  <caption><b>Таблиця 1.</b> Підсумкові бали</caption>
-                  <thead>
-                    <tr>
-                      <th rowspan="2">№</th>
-                      <th rowspan="2">ПІБ студента</th>
-                      <th colspan="4">Дисципліна</th>
-                      <th rowspan="2">Середній бал</th>
-                    </tr>
-                    <tr>
-                      <th>Архітектура компʼютерів</th>
-                      <th>Бази даних</th>
-                      <th>Теорія ймовірностей</th>
-                      <th>Системне програмування</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr align="center">
-                      <td>1</td>
-                      <td align="left">Коваленко Олена</td>
-                      <td>95</td>
-                      <td>88</td>
-                      <td>91</td>
-                      <td>84</td>
-                      <td><b>89,5</b></td>
-                    </tr>
-                    <tr align="center">
-                      <td>2</td>
-                      <td align="left">Шевчук Андрій</td>
-                      <td>78</td>
-                      <td>82</td>
-                      <td>70</td>
-                      <td>90</td>
-                      <td><b>80,0</b></td>
-                    </tr>
-                    <tr align="center">
-                      <td>3</td>
-                      <td align="left">Бондар Марія</td>
-                      <td>100</td>
-                      <td>93</td>
-                      <td>87</td>
-                      <td>96</td>
-                      <td><b>94,0</b></td>
-                    </tr>
-                  </tbody>
-                  <tfoot>
-                    <tr align="center">
-                      <td colspan="2" align="right"><b>Середнє по групі:</b></td>
-                      <td>91,0</td>
-                      <td>87,7</td>
-                      <td>82,7</td>
-                      <td>90,0</td>
-                      <td><b>87,8</b></td>
-                    </tr>
-                  </tfoot>
-                </table>
-            </td>
-          </tr>
-        </table>
+    <section id="routes" class="section">
+      <h2>Оберіть маршрути, що вас цікавлять</h2>
+      <p class="hint">Колір фону мітки змінюється залежно від стану прапорця: звичайний, наведення, фокус, обраний, недоступний.</p>
 
-        <br>
+      <form class="options" action="#" method="post">
+        <div class="option">
+          <input type="checkbox" id="r-hoverla" name="routes" value="hoverla" checked>
+          <label for="r-hoverla">Говерла</label>
+        </div>
+        <div class="option">
+          <input type="checkbox" id="r-petros" name="routes" value="petros">
+          <label for="r-petros">Петрос</label>
+        </div>
+        <div class="option">
+          <input type="checkbox" id="r-chornohora" name="routes" value="chornohora">
+          <label for="r-chornohora">Чорногірський хребет</label>
+        </div>
+        <div class="option">
+          <input type="checkbox" id="r-synevyr" name="routes" value="synevyr" checked>
+          <label for="r-synevyr">Озеро Синевир</label>
+        </div>
+        <div class="option">
+          <input type="checkbox" id="r-pip" name="routes" value="pip-ivan" disabled>
+          <label for="r-pip">Піп Іван (закрито)</label>
+        </div>
+      </form>
+    </section>
 
-        <!-- форма реєстрації -->
-        <table width="100%" border="1">
-          <tr>
-            <td>
-                <h2>4. Реєстрація відвідувача сайту</h2>
+    <section id="trips" class="section">
+      <h2 class="shifted">Найближчі походи</h2>
 
-                <form action="#" method="post">
-                  <fieldset>
-                    <legend><b>Особисті дані</b></legend>
-                    <table border="0" cellpadding="4">
-                      <tr>
-                        <td><label for="fullname">ПІБ *</label></td>
-                        <td><input type="text" id="fullname" name="fullname" size="30" placeholder="Іваненко Іван Іванович" required></td>
-                      </tr>
-                      <tr>
-                        <td><label for="course">Курс</label></td>
-                        <td>
-                          <select id="course" name="course">
-                            <option value="1">1 курс</option>
-                            <option value="2">2 курс</option>
-                            <option value="3" selected>3 курс</option>
-                            <option value="4">4 курс</option>
-                            <option value="master">Магістратура</option>
-                          </select>
-                        </td>
-                      </tr>
-                    </table>
-                  </fieldset>
+      <div class="cards">
+        <article class="card">
+          <span class="badge">Новинка</span>
+          <h3>Вихідні на Петросі</h3>
+          <p>2 дні, 24 км, складність: <b>середня</b>.</p>
+          <p class="date">14&ndash;15 грудня</p>
+        </article>
+        <article class="card">
+          <h3>Зимова Говерла</h3>
+          <p>1 день, 16 км, складність: <b>висока</b>.</p>
+          <p class="date">11 січня</p>
+        </article>
+        <article class="card">
+          <span class="badge badge-hot">Останні місця</span>
+          <h3>Синевир і водоспад Шипіт</h3>
+          <p>3 дні, 30 км, складність: <b>низька</b>.</p>
+          <p class="date">7&ndash;9 лютого</p>
+        </article>
+      </div>
+    </section>
 
-                  <br>
+    <section id="gallery" class="section">
+      <h2>Flexbox-контейнер</h2>
+      <p class="hint">Елементи 1&ndash;8 ділять перший рядок порівну, 9-й займає весь другий рядок.</p>
 
-                  <fieldset>
-                    <legend><b>Дані облікового запису</b></legend>
-                    <table border="0" cellpadding="4">
-                      <tr>
-                        <td><label for="email">E-mail *</label></td>
-                        <td><input type="email" id="email" name="email" size="30" placeholder="student@nure.ua" required></td>
-                      </tr>
-                      <tr>
-                        <td><label for="password">Пароль *</label></td>
-                        <td><input type="password" id="password" name="password" size="20" minlength="8" required></td>
-                      </tr>
-                    </table>
-                  </fieldset>
+      <div class="flex-container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+      </div>
+    </section>
 
-                  <p>
-                    <input type="submit" value="Зареєструватися">
-                    <input type="reset" value="Очистити форму">
-                  </p>
-                </form>
-            </td>
-          </tr>
-        </table>
-    </td>
+  </main>
 
-    <!-- SIDEBAR -->
-    <td width="30%" valign="top">
-      <aside>
-            <p align="center"><b>Наш університет</b></p>
-            <p align="center">
-             <a href="https://nure.ua/">
-                <img src="assets/logo.png" width="52" height="52"
-                    alt="Банер ХНУРЕ &mdash; перейти на офіційний сайт університету">
-            </a>
-            </p> 
-      </aside>
-    </td>
-  </tr>
+  <footer id="contacts" class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Туристичний клуб «Вершина»</p>
+      <p>Пишіть нам: <a href="mailto:club@example.com">club@example.com</a></p>
+    </div>
+  </footer>
 
-</table>
+  <a href="#top" class="to-top" title="Нагору">&uarr;</a>
 
 </body>
 </html>
